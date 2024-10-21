@@ -50,14 +50,28 @@ export function ThreeDCardDemo(props) {
                 as="button"
                 className="px-2 py-2 rounded-xl bg-gray-100 dark:bg-white dark:text-black text-gray-500 text-xs font-light"
               >
-                Next JS
+                {props.frontend}
               </CardItem>
               <CardItem
                 translateZ="10"
                 as="button"
                 className="px-2 py-2 rounded-xl bg-gray-100 dark:bg-white dark:text-black text-gray-500 text-xs font-light"
               >
-                Node JS
+                {props.backend}
+              </CardItem>
+              <CardItem
+                translateZ="10"
+                as="button"
+                className="px-2 py-2 rounded-xl bg-gray-100 dark:bg-white dark:text-black text-gray-500 text-xs font-light"
+              >
+                {props.database}
+              </CardItem>
+              <CardItem
+                translateZ="10"
+                as="button"
+                className="px-2 py-2 rounded-xl bg-gray-100 dark:bg-white dark:text-black text-gray-500 text-xs font-light"
+              >
+                {props.style}
               </CardItem>
             </div>
           </div>
