@@ -69,9 +69,15 @@
 }
 
 .sidebarlink:hover .purple-icon {
-  stroke: purple;
+  stroke: #b182e3;
 }
 
 .sidebarlink:hover span {
   color: black;
+}
+
+@media screen and (max-width: 430px) {
+  .mobile-card-shadow {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
 }

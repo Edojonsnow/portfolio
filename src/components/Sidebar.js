@@ -25,8 +25,31 @@ import { FlipWords } from "./ui/flip-words";
 
 import { ThreeDCardDemo } from "./3dcard";
 import Home from "./Home";
+import { HoverBorderGradient } from "./ui/hover-border-gradient";
 
 export function SidebarDemo({ children }) {
+  const [isDownloading, setIsDownloading] = React.useState(false);
+
+  const handleDownload = async () => {
+    setIsDownloading(true);
+    try {
+      // Replace this URL with your actual resume file URL
+      const resumeUrl = "/resume.pdf";
+
+      // Create a temporary link element
+      const link = document.createElement("a");
+      link.href = resumeUrl;
+      link.setAttribute("download", "Alexander-Oronsaye-Resume.pdf");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error("Download failed:", error);
+    } finally {
+      // Reset the button state after a brief delay
+      setTimeout(() => setIsDownloading(false), 1000);
+    }
+  };
   const links = [
     {
       label: "Home",
@@ -105,32 +128,33 @@ export function SidebarDemo({ children }) {
       )}
     >
       <Sidebar open={open} setOpen={setOpen}>
-        <SidebarBody className="justify-between gap-10">
+        <SidebarBody className="justify-between gap-5">
           <div>
             <Image
-              src=""
-              className="h-7 w-7 flex-shrink-0 rounded-full mx-auto"
+              src="/profile-pic.jpeg"
+              className={` w-20 object-cover object-bottom flex-shrink-0 rounded-full mx-auto  ${
+                open ? "h-24" : "h-8"
+              }`}
               width={50}
               height={50}
               alt="Avatar"
             />
             <SidebarLink
               link={{
-                label: "Alexander O. Oronsaye",
+                label: (
+                  <div className="py-1.5 mx-auto">
+                    <p> Alexander O. Oronsaye</p>
+                    <p className="text-sm text-gray-400"> Software Developer</p>
+                  </div>
+                ),
                 href: "#",
               }}
               className="p-0 text-black"
             />
-
-            {open ? (
-              <p className="text-sm text-gray-400">Software Developer</p>
-            ) : (
-              ""
-            )}
           </div>
           <div className="flex flex-col flex-1  overflow-y-auto overflow-x-hidden">
             {/* {open ? <Logo /> : <LogoIcon />} */}
-            <div className="mt-8 flex flex-col gap-2">
+            <div className=" flex flex-col gap-2">
               {links.map((link, idx) => (
                 <SidebarLink
                   key={idx}
@@ -151,6 +175,35 @@ export function SidebarDemo({ children }) {
               ))}
             </div>
           </div>
+          {open ? (
+            // <div className="flex justify-center text-center mb-4">
+            //   <HoverBorderGradient
+            //     containerClassName=""
+            //     onClick={handleDownload}
+            //     disabled={isDownloading}
+            //     as="button"
+            //     className="dark:bg-black bg-black text-white hover:text-black hover:bg-white dark:text-white flex items-center space-x-2"
+            //   >
+            //     <span>Resume</span>
+            //   </HoverBorderGradient>
+            // </div>
+            <button
+              disabled={isDownloading}
+              onClick={handleDownload}
+              value="Send Message"
+              className="p-[3px] relative lg:mb-6"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full" />
+              <div
+                id="send"
+                className="px-8 py-2  bg-white rounded-full  relative group transition duration-200 text-black hover:text-white hover:bg-transparent"
+              >
+                Resume
+              </div>
+            </button>
+          ) : (
+            ""
+          )}
         </SidebarBody>
       </Sidebar>
       {children}

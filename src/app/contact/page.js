@@ -54,14 +54,14 @@ const Contact = () => {
                 id="name"
                 placeholder="First Name"
                 required
-                className="block w-full outline-none h-12 rounded-md border-0 py-1.5 px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-200 focus:ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                className="block w-full outline-none   h-12 rounded-md border-0 py-1.5 px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-200  placeholder:text-gray-400 focus:ring-2 focus:ring-purple-400 focus:ring-inset  sm:text-sm sm:leading-6"
               />
               <input
                 type="text"
                 id="description"
                 placeholder="Last Name"
                 required
-                className="block w-full h-12 outline-none rounded-md border-0 py-1.5 px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-200 focus:ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                className="block w-full h-12 outline-none rounded-md border-0 py-1.5 px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-200  placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-400 sm:text-sm sm:leading-6"
               />
             </div>
 
@@ -71,22 +71,22 @@ const Contact = () => {
                 id=""
                 required
                 placeholder="Email"
-                className="block w-full h-12 outline-none rounded-md border-0 py-1.5 px-1.5 text-gray-900 shadow-sm ring-1 ring-inset  ring-gray-200 focus:ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                className="block w-full h-12 outline-none rounded-md border-0 py-1.5 px-1.5 text-gray-900 shadow-sm ring-1 ring-inset  ring-gray-200  placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-400 sm:text-sm sm:leading-6"
               />
               <input
                 type="text"
                 id=""
                 required
                 placeholder="Phone Number"
-                className="block w-full h-12 outline-none rounded-md border-0 py-1.5 px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-200 focus:ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                className="block w-full h-12 outline-none rounded-md border-0 py-1.5 px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-200  placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-400 sm:text-sm sm:leading-6"
               />
             </div>
-            <div>
+            <div className="py-4">
               <input
                 id="type"
                 required
                 placeholder="Service Required  e.g 'Full-stack web app'"
-                className="block w-full h-12 outline-none rounded-md border-0 py-1.5 px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-200 focus:ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                className="block w-full h-12 outline-none rounded-md border-0 py-1.5 px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-200  placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-400 sm:text-sm sm:leading-6"
               />
             </div>
             <div className="py-4">
@@ -94,7 +94,7 @@ const Contact = () => {
                 type="text"
                 placeholder="Service Description"
                 required
-                className="block w-full h-24 outline-none rounded-md border-0 py-1.5 px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-200 focus:ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                className="block w-full h-24 outline-none rounded-md border-0 py-1.5 px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-200  placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-400 sm:text-sm sm:leading-6"
               />
             </div>
             <button value="Send Message" className="p-[3px] relative">

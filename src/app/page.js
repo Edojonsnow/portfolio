@@ -1,4 +1,3 @@
-import { TracingBeamDemo } from "@/components/Beam";
 import Home from "@/components/Home";
 import { SidebarDemo } from "@/components/Sidebar";
 

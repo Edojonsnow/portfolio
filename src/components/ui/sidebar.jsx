@@ -99,7 +99,7 @@ export const MobileSidebar = ({ className, children, ...props }) => {
                 ease: "easeInOut",
               }}
               className={cn(
-                "fixed h-full w-2/3 inset-0 bg-white dark:bg-neutral-900 p-10 z-[100] flex flex-col justify-between",
+                "fixed h-full w-2/3 inset-0 bg-white dark:bg-neutral-900 px-10 py-5 shadow z-[100] flex flex-col justify-between",
                 className
               )}
             >
@@ -132,7 +132,7 @@ export const SidebarLink = ({ link, className, ...props }) => {
       {link.icon}
       <motion.span
         animate={{
-          display: animate ? (open ? "inline-block" : "none") : "inline-block",
+          visibility: animate ? (open ? "visible" : "none") : "inline-block",
           opacity: animate ? (open ? 1 : 0) : 1,
         }}
         className=" text-neutral-500  dark:text-neutral-200 text-sm group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre inline-block  !m-0"
