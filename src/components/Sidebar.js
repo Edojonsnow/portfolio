@@ -84,28 +84,28 @@ export function SidebarDemo({ children }) {
   const socials = [
     {
       label: "X",
-      href: "#",
+      href: "https://x.com/edojonsnow",
       icon: (
         <IconBrandX className="text-neutral-500 purple-icon  dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Instagram",
-      href: "#",
+      href: "https://www.instagram.com/edojonsnow/",
       icon: (
         <IconBrandInstagram className="text-neutral-500 purple-icon  dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Email",
-      href: "#",
+      href: "mailto:osahonoronsaye@yahoo.com",
       icon: (
         <IconMail className="text-neutral-500 purple-icon  dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Github",
-      href: "#",
+      href: "https://github.com/Edojonsnow",
       icon: (
         <IconBrandGithub className="text-neutral-500 purple-icon  dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
@@ -176,17 +176,6 @@ export function SidebarDemo({ children }) {
             </div>
           </div>
           {open ? (
-            // <div className="flex justify-center text-center mb-4">
-            //   <HoverBorderGradient
-            //     containerClassName=""
-            //     onClick={handleDownload}
-            //     disabled={isDownloading}
-            //     as="button"
-            //     className="dark:bg-black bg-black text-white hover:text-black hover:bg-white dark:text-white flex items-center space-x-2"
-            //   >
-            //     <span>Resume</span>
-            //   </HoverBorderGradient>
-            // </div>
             <button
               disabled={isDownloading}
               onClick={handleDownload}
@@ -237,5 +226,3 @@ export const LogoIcon = () => {
     </Link>
   );
 };
-
-// Dummy dashboard component with content

@@ -40,7 +40,10 @@ const Projects = () => {
     <SidebarDemo className="">
       <div className="flex flex-col p-4   md:p-10 lg:pl-96 overflow-y-auto lg:pt-24 lg:rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900  gap-2 w-full">
         <div className=" lg:w-2/3 lg:mt-8 ">
-          <h1 className="text-bold text-3xl mx-auto lg:mx-0 py-3 lg:py-0   w-fit text-gray-600">
+          <h1
+            data-aos="fade-left"
+            className="text-bold text-3xl mx-auto lg:mx-0 py-3 lg:py-0   w-fit text-gray-600"
+          >
             Some of my projects
           </h1>
           <div className="flex flex-col gap-6 justify-start">
@@ -51,6 +54,7 @@ const Projects = () => {
               database="Prisma"
               imageSrc="/blogpic.png"
               link="https://github.com/Edojonsnow/Next-Blog"
+              delay="300"
             />
             <ThreeDCardDemo
               title="No Limit store"
@@ -59,6 +63,7 @@ const Projects = () => {
               database="MongoDB"
               imageSrc="/ecom-pic.png"
               link="https://github.com/Edojonsnow/ebuks"
+              delay="400"
             />
             <ThreeDCardDemo
               title="Quiz App"
@@ -67,6 +72,7 @@ const Projects = () => {
               database="MongoDB"
               imageSrc="/ecom-pic.png"
               link="https://github.com/Edojonsnow/quiz_app"
+              delay="500"
             />
           </div>
         </div>
