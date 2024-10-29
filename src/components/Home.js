@@ -46,7 +46,7 @@ const Home = () => {
             className="text-bold text-3xl  w-fit text-gray-600"
           >
             <FlipWords words={words} className=" text-purple-500   p-0" />
-            I'm Osahon
+            I&apos;m Osahon
           </h1>
           <p data-aos="fade-right" className="text-gray-500 text-justify">
             I am a full-stack developer specializing in crafting dynamic and
@@ -71,6 +71,7 @@ const Home = () => {
               imageSrc="/blogpic.png"
               link="https://github.com/Edojonsnow/Next-Blog"
               delay="300"
+              live="https://nolimitstores.org/"
             />
             <ThreeDCardDemo
               title="No Limit store"
@@ -80,6 +81,7 @@ const Home = () => {
               imageSrc="/ecom-pic.png"
               link="https://github.com/Edojonsnow/ebuks"
               delay="400"
+              live="https://nolimitstores.org/"
             />
             <ThreeDCardDemo
               title="Quiz App"
@@ -90,6 +92,7 @@ const Home = () => {
               link="https://github.com/Edojonsnow/quiz_app"
               offset="-100"
               delay="500"
+              live="https://nolimitstores.org/"
             />
           </div>
         </div>

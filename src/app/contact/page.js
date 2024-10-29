@@ -37,16 +37,16 @@ const Contact = () => {
 
   return (
     <SidebarDemo>
-      <div className="flex flex-col p-4  md:p-10 lg:pl-48 overflow-y-auto lg:pt-24 lg:rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900  gap-2 w-full">
+      <div className="flex flex-col p-4  md:p-10 lg:pl-48 overflow-y-auto lg:pt-24 lg:rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900  gap-2 h-screen w-full">
         <h1 className="text-bold text-3xl   w-fit text-gray-600">
           Get in Touch
         </h1>
-        <p className="w-2/3 text-gray-600">
-          Contact me on X , Whatsapp or through this form. Let's bring your
+        <p className="lg:w-2/3 text-gray-600">
+          Contact me on X , Whatsapp or through this form. Let&apos;s bring your
           product to life.
         </p>
 
-        <div className=" w-2/3     ">
+        <div className=" lg:w-2/3     ">
           <form ref={form} action="submit" onSubmit={sendEmail}>
             <div className="flex gap-4 py-4">
               <input

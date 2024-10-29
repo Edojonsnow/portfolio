@@ -52,7 +52,7 @@ export function ThreeDCardDemo(props) {
                 <CardItem
                   translateZ="10"
                   as={Link}
-                  href="https://twitter.com/mannupaaji"
+                  href={props.live}
                   target="__blank"
                   className="rounded-xl text-xs font-normal hover:text-purple-400  dark:text-white"
                 >
