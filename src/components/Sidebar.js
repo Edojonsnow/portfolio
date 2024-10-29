@@ -20,12 +20,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { TracingBeam } from "./ui/tracing-beam";
-import { FlipWords } from "./ui/flip-words";
-
-import { ThreeDCardDemo } from "./3dcard";
-import Home from "./Home";
-import { HoverBorderGradient } from "./ui/hover-border-gradient";
 
 export function SidebarDemo({ children }) {
   const [isDownloading, setIsDownloading] = React.useState(false);
@@ -142,14 +136,14 @@ export function SidebarDemo({ children }) {
             <SidebarLink
               link={{
                 label: (
-                  <div className="py-1.5 mx-auto">
+                  <div className="py-1.5 mx-auto ">
                     <p> Alexander O. Oronsaye</p>
                     <p className="text-sm text-gray-400"> Software Developer</p>
                   </div>
                 ),
                 href: "#",
               }}
-              className="p-0 text-black"
+              className="p-0 text-black justify-center"
             />
           </div>
           <div className="flex flex-col flex-1  overflow-y-auto overflow-x-hidden">
@@ -159,7 +153,7 @@ export function SidebarDemo({ children }) {
                 <SidebarLink
                   key={idx}
                   link={link}
-                  className="hover:bg-white hover:shadow p-2 rounded"
+                  className="hover:bg-white hover:shadow p-2 rounded justify-start"
                 />
               ))}
               <hr />

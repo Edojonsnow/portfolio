@@ -50,7 +50,7 @@ const Home = () => {
           </h1>
           <p data-aos="fade-right" className="text-gray-500 text-justify">
             I am a full-stack developer specializing in crafting dynamic and
-            user-friendly web applications. Let's create something amazing
+            user-friendly web applications. Let&apos;s create something amazing
             together!
           </p>
         </div>
