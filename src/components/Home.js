@@ -84,6 +84,7 @@ const Home = () => {
               imageSrc="/ecom-pic.png"
               link="https://github.com/Edojonsnow/ebuks"
               delay="400"
+              offset="-800"
               live="https://nolimitstores.org/"
               desc={ecomDesc.desc}
             />
@@ -94,7 +95,7 @@ const Home = () => {
               database="MongoDB"
               imageSrc="/ecom-pic.png"
               link="https://github.com/Edojonsnow/quiz_app"
-              offset="-100"
+              offset="-800"
               delay="500"
               live="https://nolimitstores.org/"
               desc={quizDesc.desc}

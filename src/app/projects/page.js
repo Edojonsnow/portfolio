@@ -10,7 +10,12 @@ import { blogDesc, ecomDesc, eventDesc, quizDesc } from "../data/data";
 
 const Projects = () => {
   useEffect(() => {
-    Aos.init();
+    Aos.init({
+      // disable: function () {
+      //   var maxWidth = 430;
+      //   return window.innerWidth < maxWidth;
+      // },
+    });
   });
   const stack = [
     {
@@ -91,7 +96,7 @@ const Projects = () => {
               link="https://github.com/Edojonsnow/quiz_app"
               delay="500"
               live="https://nolimitstores.org/"
-              offset="-200"
+              offset="-800"
               desc={quizDesc.desc}
             />
             <ThreeDCardDemo
@@ -101,7 +106,7 @@ const Projects = () => {
               link="https://github.com/Edojonsnow/go-REST-API"
               live="#"
               delay="600"
-              offset="-400"
+              offset="-800"
               desc={eventDesc.desc}
             />
             <ThreeDCardDemo
