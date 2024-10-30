@@ -4,6 +4,7 @@ import { FlipWords } from "./ui/flip-words";
 import { ThreeDCardDemo } from "./3dcard";
 import StackIcon from "tech-stack-icons";
 import { FloatingDock } from "./ui/floating-dock";
+import { blogDesc, ecomDesc, quizDesc } from "@/app/data/data";
 
 const Home = () => {
   const words = ["Hello!", "Bonjour!", "Hola!", "Nnọọ!"];
@@ -37,9 +38,10 @@ const Home = () => {
       icon: <StackIcon name="tailwindcss" className="w-10" />,
     },
   ];
+
   return (
     <div className="flex w-full  ">
-      <div className="p-4  md:p-10 lg:pl-96 overflow-y-auto lg:pt-24 lg:rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900  gap-2 w-full ">
+      <div className="p-4  md:p-10 lg:pl-72 overflow-y-auto lg:pt-16 lg:rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900  gap-2 w-full ">
         <div className="lg:w-2/3 pt-4">
           <h1
             data-aos="fade-left"
@@ -54,7 +56,7 @@ const Home = () => {
             together!
           </p>
         </div>
-        <div className=" lg:w-2/3 mt-8">
+        <div className=" lg:w-3/4 mt-8">
           <h3
             data-aos="fade-up"
             data-aos-delay="400"
@@ -72,6 +74,7 @@ const Home = () => {
               link="https://github.com/Edojonsnow/Next-Blog"
               delay="300"
               live="https://nolimitstores.org/"
+              desc={blogDesc.desc}
             />
             <ThreeDCardDemo
               title="No Limit store"
@@ -82,6 +85,7 @@ const Home = () => {
               link="https://github.com/Edojonsnow/ebuks"
               delay="400"
               live="https://nolimitstores.org/"
+              desc={ecomDesc.desc}
             />
             <ThreeDCardDemo
               title="Quiz App"
@@ -93,6 +97,7 @@ const Home = () => {
               offset="-100"
               delay="500"
               live="https://nolimitstores.org/"
+              desc={quizDesc.desc}
             />
           </div>
         </div>

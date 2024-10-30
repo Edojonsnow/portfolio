@@ -6,6 +6,7 @@ import { FloatingDock } from "@/components/ui/floating-dock";
 import Aos from "aos";
 import React, { useEffect } from "react";
 import StackIcon from "tech-stack-icons";
+import { blogDesc, ecomDesc, eventDesc, quizDesc } from "../data/data";
 
 const Projects = () => {
   useEffect(() => {
@@ -42,20 +43,20 @@ const Projects = () => {
   ];
   return (
     <SidebarDemo className="">
-      <div className="flex flex-col p-4   md:p-10 lg:pl-96 overflow-y-auto lg:pt-24 lg:rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900  gap-2 w-full">
-        <div className=" lg:w-2/3 lg:mt-8 ">
+      <div className="flex flex-col p-4   md:p-10 lg:pl-72 overflow-y-auto lg:pt-16 lg:rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900  gap-2 w-full">
+        <div className=" lg:w-3/4 lg:mt-8 ">
           <h1
             data-aos="fade-left"
             className="text-bold text-3xl mx-auto lg:mx-0 py-3 lg:py-0   w-fit text-gray-600"
           >
-            Some of my projects
+            Projects
           </h1>
           <p className="text-gray-500 text-justify">
             From dynamic blog platforms to interactive quiz applications, these
             projects represent my journey in web development. Each application
-            is crafted with scalability and user experience in mind, leveraging
-            the power of Next.js, React, and MongoDB to create seamless digital
-            experiences.
+            is crafted with responsiveness and user experience in mind,mostly
+            leveraging the power of Next.js, React, and MongoDB to create
+            seamless digital experiences.
           </p>
           <div className="flex pt-4 flex-col gap-6 justify-start">
             <ThreeDCardDemo
@@ -67,16 +68,19 @@ const Projects = () => {
               link="https://github.com/Edojonsnow/Next-Blog"
               delay="300"
               live="https://nolimitstores.org/"
+              desc={blogDesc.desc}
             />
             <ThreeDCardDemo
-              title="No Limit store"
+              title="No Limit Store"
               frontend="NextJS"
               backend="NodeJS"
               database="MongoDB"
               imageSrc="/ecom-pic.png"
               link="https://github.com/Edojonsnow/ebuks"
               delay="400"
+              offset="-200"
               live="https://nolimitstores.org/"
+              desc={ecomDesc.desc}
             />
             <ThreeDCardDemo
               title="Quiz App"
@@ -87,16 +91,18 @@ const Projects = () => {
               link="https://github.com/Edojonsnow/quiz_app"
               delay="500"
               live="https://nolimitstores.org/"
-              offset="-100"
+              offset="-200"
+              desc={quizDesc.desc}
             />
             <ThreeDCardDemo
-              title="Event Booking"
+              title="Book an Event"
               backend="Go"
               imageSrc="/ecom-pic.png"
               link="https://github.com/Edojonsnow/go-REST-API"
               live="#"
               delay="600"
-              offset="-100"
+              offset="-400"
+              desc={eventDesc.desc}
             />
             <ThreeDCardDemo
               title="Vogue Boys"
@@ -105,7 +111,7 @@ const Projects = () => {
               link="https://github.com/Edojonsnow/go-REST-API"
               live="https://nolimitstores.org/"
               delay="700"
-              offset="-500"
+              offset="-800"
             />
           </div>
         </div>

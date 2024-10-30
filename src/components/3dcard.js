@@ -15,15 +15,16 @@ export function ThreeDCardDemo(props) {
       data-aos="fade-right"
       data-aos-delay={props.delay}
       data-aos-offset={props.offset}
+      className=" "
     >
-      <CardContainer className="inter-var mobile-card-shadow  rounded-3xl w-[300px] lg:w-auto mx-auto lg:mx-0   p-3 ">
-        <CardBody className=" lg:hover:shadow flex flex-col lg:flex-row relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-fit rounded-xl  lg:p-3   ">
-          <CardItem translateZ="10" className="w-fit  lg:mr-4 ">
+      <CardContainer className="inter-var mobile-card-shadow  rounded-3xl w-[300px] lg:w-full mx-auto lg:mx-0   p-3 ">
+        <CardBody className=" lg:hover:shadow flex flex-col lg:flex-row  lg:gap-3 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] h-fit w-full lg:h-44 rounded-xl  lg:p-3   ">
+          <CardItem translateZ="10" className="w-fit lg:w-44  lg:mr-4 ">
             <Image
               src={props.imageSrc}
               height="500"
               width="500"
-              className=" w-96 lg:pb-2  h-32 lg:w-32 object-cover lg:border-2 border-gray-200 rounded-xl group-hover/card:shadow-xl"
+              className=" w-96 lg:pb-2  h-36 lg:w-44 object-cover lg:border-2 border-gray-200 rounded-xl group-hover/card:shadow-xl"
               alt="thumbnail"
             />
           </CardItem>
@@ -43,10 +44,9 @@ export function ThreeDCardDemo(props) {
               <CardItem
                 as="p"
                 translateZ="10"
-                className="text-neutral-500 text-center lg:text-start text-sm max-w-md lg:mt-2 dark:text-neutral-300"
+                className="text-neutral-500 text-start lg:text-start text-sm  max-w-2xl  lg:mt-2 dark:text-neutral-300"
               >
-                Hover over this card to unleash the power of CSS perspective
-                testing 12 testing 12
+                {props.desc}
               </CardItem>
               <div className="flex justify-between items-center mt-4 px-2 ">
                 <CardItem
@@ -56,9 +56,13 @@ export function ThreeDCardDemo(props) {
                   target="__blank"
                   className="rounded-xl text-xs font-normal hover:text-purple-400  dark:text-white"
                 >
-                  Live
+                  LIVE
                 </CardItem>
-                <Link href={props.link}>
+                <Link
+                  href={props.link}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   <IconCode className="text-neutral-500 purple-icon hover:text-purple-400  h-5 w-5 flex-shrink-0" />
                 </Link>
                 <div className="flex items-center space-x-2">
