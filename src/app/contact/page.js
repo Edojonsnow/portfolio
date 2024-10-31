@@ -2,6 +2,7 @@
 import { SidebarDemo } from "@/components/Sidebar";
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import Image from "next/image";
 
 const Contact = () => {
   const form = useRef();
@@ -38,9 +39,15 @@ const Contact = () => {
   return (
     <SidebarDemo>
       <div className="flex flex-col p-4  md:p-10 lg:pl-48 overflow-y-auto lg:pt-24 lg:rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900  gap-2 h-screen w-full">
-        <h1 className="text-bold text-3xl   w-fit text-gray-600">
-          Get in Touch
-        </h1>
+        <div className="flex items-center gap-4">
+          <Image src="/contact-us.png" width={40} height={40} />
+          <h1
+            data-aos="fade-left"
+            className="text-bold text-3xl   w-fit text-gray-600"
+          >
+            Get in Touch
+          </h1>
+        </div>
         <p className="lg:w-2/3 text-gray-600">
           Contact me on X , Whatsapp or through this form. Let&apos;s bring your
           product to life.
@@ -108,6 +115,13 @@ const Contact = () => {
             </button>
           </form>
         </div>
+        <a
+          href="https://www.flaticon.com/free-icons/contact-us"
+          title="contact us icons"
+          className="absolute bottom-1 text-gray-300"
+        >
+          Contact us icons created by pojok d - Flaticon
+        </a>
       </div>
     </SidebarDemo>
   );

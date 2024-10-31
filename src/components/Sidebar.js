@@ -116,7 +116,7 @@ export function SidebarDemo({ children }) {
   return (
     <div
       className={cn(
-        "rounded-md pt-4 flex flex-col md:flex-row bg-gray-100 dark:bg-neutral-800 w-full flex-1  mx-auto border border-neutral-200 dark:border-neutral-700 overflow-y-auto",
+        "rounded-md lg:pt-4 flex flex-col md:flex-row bg-gray-100 dark:bg-neutral-800 w-full flex-1  mx-auto border border-neutral-200 dark:border-neutral-700 overflow-y-auto",
         // for your use case, use `h-screen` instead of `h-[60vh]`
         "h-screen"
       )}
@@ -156,18 +156,8 @@ export function SidebarDemo({ children }) {
                   className="hover:bg-white hover:shadow p-2 rounded justify-start"
                 />
               ))}
-              <hr />
             </div>
             {/* {open ? <h2 className="mt-8 text-neutral-700">Socials</h2> : ""} */}
-            <div className="mt-2 flex flex-col gap-2">
-              {socials.map((link, idx) => (
-                <SidebarLink
-                  key={idx}
-                  link={link}
-                  className=" hover:bg-white hover:shadow p-2 rounded"
-                />
-              ))}
-            </div>
           </div>
           {open ? (
             <button

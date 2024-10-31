@@ -7,6 +7,7 @@ import Aos from "aos";
 import React, { useEffect } from "react";
 import StackIcon from "tech-stack-icons";
 import { blogDesc, ecomDesc, eventDesc, quizDesc } from "../data/data";
+import Image from "next/image";
 
 const Projects = () => {
   useEffect(() => {
@@ -50,12 +51,15 @@ const Projects = () => {
     <SidebarDemo className="">
       <div className="flex flex-col p-4   md:p-10 lg:pl-72 overflow-y-auto lg:pt-16 lg:rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900  gap-2 w-full">
         <div className=" lg:w-3/4 lg:mt-8 ">
-          <h1
-            data-aos="fade-left"
-            className="text-bold text-3xl mx-auto lg:mx-0 py-3 lg:py-0   w-fit text-gray-600"
-          >
-            Projects
-          </h1>
+          <div className="flex  items-center gap-4">
+            <Image src="/code.png" width={50} height={50} />
+            <h1
+              data-aos="fade-left"
+              className="text-bold text-3xl  lg:mx-0 py-3 lg:py-0   w-fit text-gray-600"
+            >
+              Projects
+            </h1>
+          </div>
           <p className="text-gray-500 text-justify">
             From dynamic blog platforms to interactive quiz applications, these
             projects represent my journey in web development. Each application
@@ -63,6 +67,19 @@ const Projects = () => {
             leveraging the power of Next.js, React, and MongoDB to create
             seamless digital experiences.
           </p>
+          <div className="mt-8 lg:mb-16">
+            <h3 className="text-bold   w-fit text-gray-600">Tech Stack</h3>
+            <div className="flex gap-4 mt-4 ">
+              <FloatingDock mobileClassName="translate-y-20" items={stack} />
+            </div>
+            <div className="lg:hidden grid items-center place-items-center grid-cols-4 gap-2">
+              {stack.map((item) => (
+                <div key={item.icon} className="   gap-2">
+                  {item.icon}
+                </div>
+              ))}
+            </div>
+          </div>
           <div className="flex pt-4 flex-col gap-6 justify-start">
             <ThreeDCardDemo
               title="Blog"
@@ -118,19 +135,6 @@ const Projects = () => {
               delay="700"
               offset="-800"
             />
-          </div>
-        </div>
-        <div className="mt-8 lg:mb-16">
-          <h3 className="text-bold   w-fit text-gray-600">Tech Stack</h3>
-          <div className="flex gap-4 mt-4 ">
-            <FloatingDock mobileClassName="translate-y-20" items={stack} />
-          </div>
-          <div className="lg:hidden grid items-center place-items-center grid-cols-4 gap-2">
-            {stack.map((item) => (
-              <div key={item.icon} className="   gap-2">
-                {item.icon}
-              </div>
-            ))}
           </div>
         </div>
       </div>

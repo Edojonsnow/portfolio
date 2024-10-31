@@ -68,6 +68,9 @@
   }
 }
 
+.social:hover .purple-icon {
+  stroke: white;
+}
 .sidebarlink:hover .purple-icon {
   stroke: #b182e3;
 }

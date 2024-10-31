@@ -1,11 +1,20 @@
 import { SidebarDemo } from "@/components/Sidebar";
+import Image from "next/image";
 import React from "react";
 
 const About = () => {
   return (
-    <SidebarDemo>
+    <SidebarDemo className="relative">
       <div className="flex flex-col p-4   md:p-10 lg:pl-72 overflow-y-auto lg:pt-24 lg:rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 h-screen  gap-2 w-full">
-        <h1 className="text-gray-600 text-3xl  text-bold">About Me</h1>
+        <div className="flex  items-center gap-4">
+          <Image src="/coding.png" width={50} height={50} />
+          <h1
+            data-aos="fade-left"
+            className="text-gray-600 text-3xl  text-bold"
+          >
+            About Me
+          </h1>
+        </div>
         <p className=" w-full lg:w-2/3 text-justify  text-gray-600">
           Hello. I&apos;m Osahon, a 23 year old graduate of Computer Science
           from the Bells University of Technology. I possess roughly 4 years of
