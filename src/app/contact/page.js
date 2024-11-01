@@ -118,9 +118,9 @@ const Contact = () => {
         <a
           href="https://www.flaticon.com/free-icons/contact-us"
           title="contact us icons"
-          className="absolute bottom-1 text-gray-300"
+          className="absolute  bottom-0 text-gray-300"
         >
-          Contact us icons created by pojok d - Flaticon
+          Icon created by pojok d - Flaticon
         </a>
       </div>
     </SidebarDemo>

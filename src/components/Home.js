@@ -239,6 +239,7 @@ const Home = () => {
         <div
           data-aos="fade-up"
           data-aos-delay="900"
+          data-aos-offset="-500"
           className="mt-8 w-fit lg:ml-48 lg:mb-16"
         >
           {/* <h3 className="text-bold  pl-4   w-fit text-gray-600">Tech Stack</h3> */}

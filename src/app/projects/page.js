@@ -60,26 +60,13 @@ const Projects = () => {
               Projects
             </h1>
           </div>
-          <p className="text-gray-500 text-justify">
+          <p data-aos="fade-right" className="text-gray-500 text-justify">
             From dynamic blog platforms to interactive quiz applications, these
             projects represent my journey in web development. Each application
             is crafted with responsiveness and user experience in mind,mostly
             leveraging the power of Next.js, React, and MongoDB to create
             seamless digital experiences.
           </p>
-          <div className="mt-8 lg:mb-16">
-            <h3 className="text-bold   w-fit text-gray-600">Tech Stack</h3>
-            <div className="flex gap-4 mt-4 ">
-              <FloatingDock mobileClassName="translate-y-20" items={stack} />
-            </div>
-            <div className="lg:hidden grid items-center place-items-center grid-cols-4 gap-2">
-              {stack.map((item) => (
-                <div key={item.icon} className="   gap-2">
-                  {item.icon}
-                </div>
-              ))}
-            </div>
-          </div>
           <div className="flex pt-4 flex-col gap-6 justify-start">
             <ThreeDCardDemo
               title="Blog"
@@ -135,6 +122,19 @@ const Projects = () => {
               delay="700"
               offset="-800"
             />
+          </div>
+        </div>
+        <div className="mt-8 lg:mb-16">
+          <h3 className="text-bold   w-fit text-gray-600">Tech Stack</h3>
+          <div className="flex gap-4 mt-4 ">
+            <FloatingDock mobileClassName="translate-y-20" items={stack} />
+          </div>
+          <div className="lg:hidden grid items-center place-items-center grid-cols-4 gap-2">
+            {stack.map((item) => (
+              <div key={item.icon} className="   gap-2">
+                {item.icon}
+              </div>
+            ))}
           </div>
         </div>
       </div>
