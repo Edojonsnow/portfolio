@@ -6,7 +6,13 @@ import { FloatingDock } from "@/components/ui/floating-dock";
 import Aos from "aos";
 import React, { useEffect } from "react";
 import StackIcon from "tech-stack-icons";
-import { blogDesc, ecomDesc, eventDesc, quizDesc } from "../data/data";
+import {
+  blogDesc,
+  ecomDesc,
+  eventDesc,
+  quizDesc,
+  vogueDesc,
+} from "../data/data";
 import Image from "next/image";
 
 const Projects = () => {
@@ -76,7 +82,7 @@ const Projects = () => {
               imageSrc="/blogpic.png"
               link="https://github.com/Edojonsnow/Next-Blog"
               delay="300"
-              live="https://nolimitstores.org/"
+              live=""
               desc={blogDesc.desc}
             />
             <ThreeDCardDemo
@@ -92,35 +98,37 @@ const Projects = () => {
               desc={ecomDesc.desc}
             />
             <ThreeDCardDemo
-              title="Quiz App"
-              frontend="React"
-              backend="NodeJS"
-              database="MongoDB"
-              imageSrc="/ecom-pic.png"
-              link="https://github.com/Edojonsnow/quiz_app"
+              title="Vogue Boys"
+              frontend="NextJS"
+              backend="TailwindCSS"
+              imageSrc="/vboys.png"
+              link="https://github.com/Edojonsnow/vboys"
+              live=""
+              delay="700"
+              offset="-800"
+              desc={vogueDesc.desc}
+            />
+            <ThreeDCardDemo
+              title="Quiz-Me"
+              frontend="NextJS"
+              backend="TypeScript"
+              database="Supabase"
+              imageSrc="/quiz-me.png"
+              link="https://github.com/Edojonsnow/quiz-me"
               delay="500"
-              live="https://nolimitstores.org/"
+              live=""
               offset="-800"
               desc={quizDesc.desc}
             />
             <ThreeDCardDemo
               title="Book an Event"
               backend="Go"
-              imageSrc="/ecom-pic.png"
+              imageSrc="/go-api.png"
               link="https://github.com/Edojonsnow/go-REST-API"
               live="#"
               delay="600"
               offset="-800"
               desc={eventDesc.desc}
-            />
-            <ThreeDCardDemo
-              title="Vogue Boys"
-              frontend="Next"
-              imageSrc="/ecom-pic.png"
-              link="https://github.com/Edojonsnow/go-REST-API"
-              live="https://nolimitstores.org/"
-              delay="700"
-              offset="-800"
             />
           </div>
         </div>

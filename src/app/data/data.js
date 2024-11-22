@@ -7,9 +7,13 @@ export const ecomDesc = {
 };
 
 export const quizDesc = {
-  desc: "A full-stack quiz application built with React, Node.js, and MongoDB, enabling users to create, take, and share engaging quizzes.",
+  desc: "A full-stack quiz application built with NextJS and Supabase, enabling users to authenticate using Twitter and take engaging quizzes.",
 };
 
 export const eventDesc = {
   desc: "A RESTful API built with Go that allows users to create, update, and delete events. Events can have details like title, description, start/end dates, and location.",
+};
+
+export const vogueDesc = {
+  desc: "A simple website for Vogue Boys showing  past and upcoming events.  ",
 };
