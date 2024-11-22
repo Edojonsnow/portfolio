@@ -103,7 +103,7 @@ const Projects = () => {
               backend="TailwindCSS"
               imageSrc="/vboys.png"
               link="https://github.com/Edojonsnow/vboys"
-              live=""
+              live="https://vboys.vercel.app/"
               delay="700"
               offset="-800"
               desc={vogueDesc.desc}
