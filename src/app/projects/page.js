@@ -12,6 +12,7 @@ import {
   eventDesc,
   quizDesc,
   vogueDesc,
+  ulsDesc,
 } from "../data/data";
 import Image from "next/image";
 
@@ -58,7 +59,7 @@ const Projects = () => {
       <div className="flex flex-col p-4   md:p-10 lg:pl-72 overflow-y-auto lg:pt-16 lg:rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900  gap-2 w-full">
         <div className=" lg:w-3/4 lg:mt-8 ">
           <div className="flex  items-center gap-4">
-            <Image src="/code.png" width={50} height={50} />
+            <Image src="/code.png" width={50} height={50} alt="code image" />
             <h1
               data-aos="fade-left"
               className="text-bold text-3xl  lg:mx-0 py-3 lg:py-0   w-fit text-gray-600"
@@ -75,27 +76,27 @@ const Projects = () => {
           </p>
           <div className="flex pt-4 flex-col gap-6 justify-start">
             <ThreeDCardDemo
-              title="Blog"
-              frontend="NextJS"
-              backend="NodeJS"
-              database="Prisma"
-              imageSrc="/blogpic.png"
-              link="https://github.com/Edojonsnow/Next-Blog"
-              delay="300"
-              live=""
-              desc={blogDesc.desc}
-            />
-            <ThreeDCardDemo
               title="No Limit Store"
               frontend="NextJS"
               backend="NodeJS"
               database="MongoDB"
               imageSrc="/ecom-pic.png"
-              link="https://github.com/Edojonsnow/ebuks"
+              link=""
               delay="400"
               offset="-200"
               live="https://nolimitstores.org/"
               desc={ecomDesc.desc}
+            />
+            <ThreeDCardDemo
+              title="Unique Love Sharity"
+              frontend="NextJS"
+              backend="Stripe"
+              database=""
+              imageSrc="/uls.png"
+              link=""
+              delay="300"
+              live="https://uniquelovesharity.org/"
+              desc={ulsDesc.desc}
             />
             <ThreeDCardDemo
               title="Vogue Boys"
@@ -109,9 +110,21 @@ const Projects = () => {
               desc={vogueDesc.desc}
             />
             <ThreeDCardDemo
+              title="Blog"
+              frontend="NextJS"
+              backend="NodeJS"
+              database="Prisma"
+              imageSrc="/blogpic.png"
+              link="https://github.com/Edojonsnow/Next-Blog"
+              delay="300"
+              live=""
+              desc={blogDesc.desc}
+            />
+
+            <ThreeDCardDemo
               title="Quiz-Me"
               frontend="NextJS"
-              backend="TypeScript"
+              backend="TS"
               database="Supabase"
               imageSrc="/quiz-me.png"
               link="https://github.com/Edojonsnow/quiz-me"

@@ -15,5 +15,8 @@ export const eventDesc = {
 };
 
 export const vogueDesc = {
-  desc: "A simple website for Vogue Boys showing  past and upcoming events.  ",
+  desc: "A dynamic event platform built for Vogue Boys, showcasing their past and upcoming raves.",
+};
+export const ulsDesc = {
+  desc: "A fully responsive donation platform built for Unique Love Sharty, enabling seamless charitable contributions through Stripe. The site features a minimalist design focused on transparent fund allocation and donor engagement ",
 };
