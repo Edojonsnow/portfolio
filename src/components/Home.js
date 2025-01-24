@@ -117,7 +117,7 @@ const Home = () => {
     },
     {
       label: "What'sApp",
-      href: "#",
+      href: "https://wa.link/lgb6ji",
       icon: (
         <IconBrandWhatsapp className="text-neutral-500 purple-icon hover:text-purple-500   dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
