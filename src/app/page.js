@@ -11,7 +11,10 @@ import { useEffect } from "react";
 
 export default function App() {
   useEffect(() => {
-    AOS.init();
+    if (window.innerWidth > 768) {
+      // Check if the window width is greater than 768px
+      AOS.init({});
+    }
   });
   return (
     <>

@@ -13,6 +13,8 @@ import {
   quizDesc,
   vogueDesc,
   ulsDesc,
+  positivusDesc,
+  matteDesc,
 } from "../data/data";
 import Image from "next/image";
 
@@ -122,16 +124,41 @@ const Projects = () => {
             />
 
             <ThreeDCardDemo
-              title="Quiz-Me"
+              title="Positivus"
               frontend="NextJS"
-              backend="TS"
-              database="Supabase"
-              imageSrc="/quiz-me.png"
-              link="https://github.com/Edojonsnow/quiz-me"
+              backend=""
+              database=""
+              imageSrc="/positivus.png"
+              link="https://github.com/Edojonsnow/positivus"
               delay="500"
-              live=""
+              live="https://positivus-d9h.pages.dev/"
               offset="-800"
-              desc={quizDesc.desc}
+              desc={positivusDesc.desc}
+            />
+            <ThreeDCardDemo
+              title="Matte Engine"
+              frontend="NextJS"
+              backend=""
+              database=""
+              imageSrc="/matte-engine.png"
+              link="https://github.com/Edojonsnow/gravityteam"
+              delay="500"
+              live="https://gravityteam.pages.dev/"
+              offset="-800"
+              desc={
+                <>
+                  {matteDesc.desc}
+                  <span style={{ margin: "0 1px" }}></span>
+                  <a
+                    className="hover:underline text-black"
+                    href="https://the18.design/freebies"
+                  >
+                    the18.design
+                  </a>
+                  <span style={{ margin: "0 1px" }}></span>
+                  {matteDesc.desc2}
+                </>
+              }
             />
             <ThreeDCardDemo
               title="Book an Event"

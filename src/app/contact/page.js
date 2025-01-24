@@ -40,7 +40,12 @@ const Contact = () => {
     <SidebarDemo>
       <div className="flex flex-col p-4  md:p-10 lg:pl-48 overflow-y-auto lg:pt-24 lg:rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900  gap-2 h-screen w-full">
         <div className="flex items-center gap-4">
-          <Image src="/contact-us.png" width={40} height={40} />
+          <Image
+            src="/contact-us.png"
+            width={40}
+            height={40}
+            alt="contact image"
+          />
           <h1
             data-aos="fade-left"
             className="text-bold text-3xl   w-fit text-gray-600"

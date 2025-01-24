@@ -137,7 +137,7 @@ const Home = () => {
         <div className="lg:w-fit flex flex-col lg:flex-row lg:gap-72 items-center pt-16 lg:pt-24 lg:ml-48">
           <div>
             <div className="flex items-center text-bold text-[40px] gap-4">
-              <Image src="/hello.png" width={50} height={50} />
+              <Image src="/hello.png" width={50} height={50} alt="hello" />
               <FlipWords words={words} className=" text-purple-500   p-0" />
             </div>
 
@@ -195,7 +195,7 @@ const Home = () => {
                     <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full" />
                     <div
                       id="send"
-                      className="px-4 py-1  bg-white rounded-full  relative group transition duration-200 text-gray-600 hover:text-white hover:bg-transparent"
+                      className="px-4 py-2  bg-white rounded-full  relative group transition duration-200 text-gray-600 hover:text-white hover:bg-transparent"
                     >
                       View resume
                     </div>
@@ -208,7 +208,7 @@ const Home = () => {
                       <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full" />
                       <div
                         id="send"
-                        className="px-4 py-1  bg-white rounded-full  relative group transition duration-200 text-gray-600 hover:text-white hover:bg-transparent"
+                        className="px-4 py-2  bg-white rounded-full  relative group transition duration-200 text-gray-600 hover:text-white hover:bg-transparent"
                       >
                         Let's Chat
                       </div>
@@ -222,7 +222,7 @@ const Home = () => {
           <div
             data-aos="fade-left"
             data-aos-delay="1000"
-            className="mt-2 flex pt-4 justify-between w-[300px] lg:w-fit flex-row lg:flex-col gap-2"
+            className="mt-4 flex pt-4 justify-between w-[300px] lg:w-fit flex-row lg:flex-col gap-2"
           >
             {socials.map((link, idx) => (
               <Link
