@@ -84,8 +84,6 @@ const Projects = () => {
               database="MongoDB"
               imageSrc="/ecom-pic.png"
               link=""
-              delay="400"
-              offset="-200"
               live="https://nolimitstores.org/"
               desc={ecomDesc.desc}
             />
@@ -96,7 +94,6 @@ const Projects = () => {
               database=""
               imageSrc="/uls.png"
               link=""
-              delay="300"
               live="https://uniquelovesharity.org/"
               desc={ulsDesc.desc}
             />
@@ -107,21 +104,18 @@ const Projects = () => {
               imageSrc="/vboys.png"
               link="https://github.com/Edojonsnow/vboys"
               live="https://vboys.vercel.app/"
-              delay="700"
-              offset="-800"
               desc={vogueDesc.desc}
             />
-            <ThreeDCardDemo
+            {/* <ThreeDCardDemo
               title="Blog"
               frontend="NextJS"
               backend="NodeJS"
               database="Prisma"
               imageSrc="/blogpic.png"
               link="https://github.com/Edojonsnow/Next-Blog"
-              delay="300"
               live=""
               desc={blogDesc.desc}
-            />
+            /> */}
 
             <ThreeDCardDemo
               title="Positivus"
@@ -130,9 +124,7 @@ const Projects = () => {
               database=""
               imageSrc="/positivus.png"
               link="https://github.com/Edojonsnow/positivus"
-              delay="500"
               live="https://positivus-d9h.pages.dev/"
-              offset="-800"
               desc={positivusDesc.desc}
             />
             <ThreeDCardDemo
@@ -142,9 +134,7 @@ const Projects = () => {
               database=""
               imageSrc="/matte-engine.png"
               link="https://github.com/Edojonsnow/gravityteam"
-              delay="500"
               live="https://gravityteam.pages.dev/"
-              offset="-800"
               desc={
                 <>
                   {matteDesc.desc}
@@ -166,8 +156,6 @@ const Projects = () => {
               imageSrc="/go-api.png"
               link="https://github.com/Edojonsnow/go-REST-API"
               live="#"
-              delay="600"
-              offset="-800"
               desc={eventDesc.desc}
             />
           </div>

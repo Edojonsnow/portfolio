@@ -10,13 +10,7 @@ export function ThreeDCardDemo(props) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div
-      onClick={() => setIsExpanded(!isExpanded)}
-      data-aos="fade-right"
-      data-aos-delay={props.delay}
-      data-aos-offset={props.offset}
-      className=" "
-    >
+    <div onClick={() => setIsExpanded(!isExpanded)} className=" ">
       <CardContainer className="inter-var mobile-card-shadow  rounded-3xl w-[300px] lg:w-full mx-auto lg:mx-0   p-3 ">
         <CardBody className=" lg:hover:shadow flex flex-col lg:flex-row  lg:gap-3 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] h-fit w-full lg:h-44 rounded-xl  lg:p-3   ">
           <CardItem translateZ="10" className="w-fit lg:w-44  lg:mr-4 ">
