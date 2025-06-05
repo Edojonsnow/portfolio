@@ -14,8 +14,26 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Alexander Osahon Oronsaye",
-  description: "",
+  title: "Alexander Oronsaye",
+  description: "Portfolio website of Alexander Oronsaye - Software Developer",
+  openGraph: {
+    title: "Alexander Osahon Oronsaye",
+    description: "Portfolio website of Alexander Oronsaye - Software Developer",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Alexander Oronsaye",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Alexander Oronsaye",
+    description: "Portfolio website of Alexander Oronsaye - Software Developer",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({ children }) {
