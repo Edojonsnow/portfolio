@@ -14,6 +14,7 @@ import {
   vogueDesc,
   ulsDesc,
   positivusDesc,
+  bVntiDesc,
   matteDesc,
 } from "../data/data";
 import Image from "next/image";
@@ -78,6 +79,15 @@ const Projects = () => {
           </p>
           <div className="flex pt-4 flex-col gap-6 justify-start">
             <ThreeDCardDemo
+              title="LikkLe bVnti"
+              frontend="Vite"
+              backend="TailwindCSS"
+              imageSrc="/bVnti.png"
+              link="https://github.com/Edojonsnow/bVnti"
+              live="https://bvnti.netlify.app/"
+              desc={bVntiDesc.desc}
+            />
+            {/* <ThreeDCardDemo
               title="No Limit Store"
               frontend="NextJS"
               backend="NodeJS"
@@ -86,7 +96,7 @@ const Projects = () => {
               link=""
               live="https://nolimitstores.org/"
               desc={ecomDesc.desc}
-            />
+            /> */}
             <ThreeDCardDemo
               title="Unique Love Sharity"
               frontend="NextJS"
@@ -106,16 +116,7 @@ const Projects = () => {
               live="https://vboys.vercel.app/"
               desc={vogueDesc.desc}
             />
-            {/* <ThreeDCardDemo
-              title="Blog"
-              frontend="NextJS"
-              backend="NodeJS"
-              database="Prisma"
-              imageSrc="/blogpic.png"
-              link="https://github.com/Edojonsnow/Next-Blog"
-              live=""
-              desc={blogDesc.desc}
-            /> */}
+
 
             <ThreeDCardDemo
               title="Positivus"
