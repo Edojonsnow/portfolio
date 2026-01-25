@@ -1,92 +1,80 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
-import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
+import React from "react";
 import Link from "next/link";
-import { IconBrandGithub, IconCode } from "@tabler/icons-react";
+import { IconBrandGithub } from "@tabler/icons-react";
 
 export function ThreeDCardDemo(props) {
-  const [isExpanded, setIsExpanded] = useState(false);
-
   return (
-    <div onClick={() => setIsExpanded(!isExpanded)} className=" ">
-      <CardContainer className="inter-var mobile-card-shadow  rounded-3xl w-[300px] lg:w-full mx-auto lg:mx-0   p-3 ">
-        <CardBody className=" lg:hover:shadow flex flex-col lg:flex-row  lg:gap-3 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] h-fit w-full lg:h-44 rounded-xl  lg:p-3   ">
-          <CardItem translateZ="10" className="w-fit lg:w-44  lg:mr-4 ">
-            <Image
-              src={props.imageSrc}
-              height="500"
-              width="500"
-              className=" w-96 lg:pb-2  h-36 lg:w-44 object-cover lg:border-2 border-gray-200 rounded-xl group-hover/card:shadow-xl"
-              alt="thumbnail"
-            />
-          </CardItem>
-
-          <div>
-            <CardItem
-              translateZ="10"
-              className="text-lg p-0.5 font-bold mx-auto lg:mx-0  text-neutral-600 dark:text-white"
-            >
-              {props.title}
-            </CardItem>
-            <div
-              className={`overflow-hidden lg:overflow-visible transition-all duration-500 ${
-                isExpanded ? "max-h-96 lg:h-fit" : "max-h-0 lg:h-fit"
-              }`}
-            >
-              <CardItem
-                as="p"
-                translateZ="10"
-                className="text-neutral-500 text-start lg:text-start text-sm  max-w-2xl  lg:mt-2 dark:text-neutral-300"
-              >
-                {props.desc}
-              </CardItem>
-              <div className="flex justify-between items-center mt-4 px-2 ">
-                <CardItem
-                  translateZ="10"
-                  as={Link}
-                  href={props.live}
-                  target="__blank"
-                  className="rounded-xl text-xs font-normal hover:text-purple-400  dark:text-white"
-                >
-                  LIVE
-                </CardItem>
+    <div className="group cursor-default">
+      <div className="inter-var overflow-hidden rounded-3xl w-full max-w-[350px] lg:max-w-full mx-auto lg:mx-0 p-1">
+        <div className="relative flex flex-col lg:flex-row lg:gap-6 w-full h-fit lg:h-52 rounded-2xl p-4 lg:p-6 bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-white/10 hover:border-purple-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-purple-500/10">
+          
+          <div className="w-full lg:w-48 flex-shrink-0">
+            <div className="relative group/image overflow-hidden rounded-xl border border-white/10 shadow-lg">
+              <Image
+                src={props.imageSrc}
+                height="600"
+                width="600"
+                className="w-full h-40 lg:h-40 object-cover transform group-hover/image:scale-110 transition-transform duration-500"
+                alt={props.title}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6 z-50">
                 <Link
-                  href={props.link}
+                  href={props.live}
                   target="_blank"
                   rel="noreferrer noopener"
+                  className="px-6 py-2 rounded-full bg-white text-black text-xs font-bold shadow-xl hover:scale-105 transition-all duration-200"
                 >
-                  <IconCode className="text-neutral-500 purple-icon hover:text-purple-400  h-5 w-5 flex-shrink-0" />
+                  VIEW PROJECT
                 </Link>
-                <div className="flex items-center space-x-2">
-                  <CardItem
-                    translateZ="10"
-                    as="button"
-                    className="px-2  py-0.5 lg:py-2 rounded-xl bg-gray-100 dark:bg-white dark:text-black text-gray-500 text-xs font-light"
-                  >
-                    {props.frontend}
-                  </CardItem>
-                  <CardItem
-                    translateZ="10"
-                    as="button"
-                    className="px-2 py-0.5 lg:py-2 rounded-xl bg-gray-100 dark:bg-white dark:text-black text-gray-500 text-xs font-light"
-                  >
-                    {props.backend}
-                  </CardItem>
-                  <CardItem
-                    translateZ="10"
-                    as="button"
-                    className="px-2 py-0.5 lg:py-2 rounded-xl bg-gray-100 dark:bg-white dark:text-black text-gray-500 text-xs font-light"
-                  >
-                    {props.database}
-                  </CardItem>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col flex-grow mt-4 lg:mt-0 justify-between">
+            <div className="flex flex-col">
+              <div className="flex justify-between items-start">
+                <h3
+                  className="text-xl lg:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-neutral-800 to-neutral-500 dark:from-white dark:to-neutral-400"
+                >
+                  {props.title}
+                </h3>
+                <Link href={props.link} target="_blank" rel="noreferrer noopener" className="p-2 rounded-full bg-neutral-100 dark:bg-neutral-800 hover:bg-purple-500 hover:text-white transition-colors duration-300">
+                  <IconBrandGithub className="h-4 w-4" />
+                </Link>
+              </div>
+
+              <div className="mt-3">
+                <p
+                  className="text-neutral-500 dark:text-neutral-400 text-sm leading-relaxed text-start line-clamp-2 lg:line-clamp-none"
+                >
+                  {props.desc}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {props.frontend && (
+                    <span className="px-3 py-1 rounded-full bg-purple-500/10 text-purple-600 dark:text-purple-400 text-[10px] font-bold uppercase tracking-widest border border-purple-500/20">
+                      {props.frontend}
+                    </span>
+                  )}
+                  {props.backend && (
+                    <span className="px-3 py-1 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-[10px] font-bold uppercase tracking-widest border border-blue-500/20">
+                      {props.backend}
+                    </span>
+                  )}
+                  {props.database && (
+                    <span className="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-[10px] font-bold uppercase tracking-widest border border-emerald-500/20">
+                      {props.database}
+                    </span>
+                  )}
                 </div>
               </div>
             </div>
           </div>
-        </CardBody>
-      </CardContainer>
+        </div>
+      </div>
     </div>
   );
 }
