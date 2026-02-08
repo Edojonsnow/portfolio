@@ -8,7 +8,7 @@ import { IconBrandGithub } from "@tabler/icons-react";
 export function ThreeDCardDemo(props) {
   return (
     <div className="group cursor-default">
-      <div className="inter-var overflow-hidden rounded-3xl w-full max-w-[350px] lg:max-w-full mx-auto lg:mx-0 p-1">
+      <div className="inter-var overflow-hidden rounded-3xl w-full max-w-[350px] lg:max-w-4xl mx-auto lg:mx-0 p-1">
         <div className="relative flex flex-col lg:flex-row lg:gap-6 w-full h-fit lg:h-52 rounded-2xl p-4 lg:p-6 bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-white/10 hover:border-purple-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-purple-500/10">
           
           <div className="w-full lg:w-48 flex-shrink-0">

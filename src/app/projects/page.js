@@ -2,82 +2,48 @@
 
 import { ThreeDCardDemo } from "@/components/3dcard";
 import { SidebarDemo } from "@/components/Sidebar";
-import { FloatingDock } from "@/components/ui/floating-dock";
 import Aos from "aos";
 import React, { useEffect } from "react";
-import StackIcon from "tech-stack-icons";
 import {
-  blogDesc,
-  ecomDesc,
-  eventDesc,
-  quizDesc,
-  vogueDesc,
-  ulsDesc,
-  positivusDesc,
   bVntiDesc,
+  eventDesc,
   matteDesc,
+  positivusDesc,
+  ulsDesc,
+  vogueDesc,
 } from "../data/data";
-import Image from "next/image";
 
 const Projects = () => {
   useEffect(() => {
     Aos.init({
-      // disable: function () {
-      //   var maxWidth = 430;
-      //   return window.innerWidth < maxWidth;
-      // },
+      once: true,
     });
   });
-  const stack = [
-    {
-      icon: <StackIcon name="nextjs" className="w-12" />,
-    },
-    {
-      icon: <StackIcon name="js" className="w-10" />,
-    },
-    {
-      icon: <StackIcon name="nodejs" className="w-10" />,
-    },
-    {
-      icon: <StackIcon name="figma" className="w-10" />,
-    },
-    {
-      icon: <StackIcon name="aws" className="w-12" />,
-    },
-    {
-      icon: <StackIcon name="docker" className="w-10" />,
-    },
-    {
-      icon: <StackIcon name="go" className="w-10" />,
-    },
-    {
-      icon: <StackIcon name="mongodb" className="w-10" />,
-    },
-    {
-      icon: <StackIcon name="tailwindcss" className="w-10" />,
-    },
-  ];
+
   return (
-    <SidebarDemo className="">
-      <div className="flex flex-col p-4   md:p-10 lg:pl-72 overflow-y-auto lg:pt-16 lg:rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900  gap-2 w-full">
-        <div className=" lg:w-3/4 lg:mt-8 ">
-          <div className="flex  items-center gap-4">
-            <Image src="/code.png" width={50} height={50} alt="code image" />
+    <SidebarDemo>
+      <div className="flex flex-col w-full h-full bg-white dark:bg-neutral-900 overflow-y-auto">
+        <div className="max-w-7xl mx-auto w-full px-4 md:px-10 py-10 lg:pt-16">
+          
+          {/* Header Section */}
+          <div className="flex flex-col gap-4 mb-12 items-center text-center">
             <h1
-              data-aos="fade-left"
-              className="text-bold text-3xl  lg:mx-0 py-3 lg:py-0   w-fit text-gray-600"
+              data-aos="fade-down"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-800 dark:text-neutral-100"
             >
-              Projects
+              My <span className="text-purple-500">Work</span>
             </h1>
+            <p
+              data-aos="fade-up"
+              data-aos-delay="100"
+              className="text-lg text-neutral-600 dark:text-neutral-400 max-w-3xl leading-relaxed"
+            >
+Some of my web applications developed using React, Python, Go, and Docker.
+            </p>
           </div>
-          <p data-aos="fade-right" className="text-gray-500 text-justify">
-            From dynamic blog platforms to interactive quiz applications, these
-            projects represent my journey in web development. Each application
-            is crafted with responsiveness and user experience in mind,mostly
-            leveraging the power of Next.js, React, and MongoDB to create
-            seamless digital experiences.
-          </p>
-          <div className="flex pt-4 flex-col gap-6 justify-start">
+
+          {/* Projects List */}
+          <div className="flex flex-col items-center gap-12 pb-20">
             <ThreeDCardDemo
               title="LikkLe bVnti"
               frontend="Vite"
@@ -87,17 +53,7 @@ const Projects = () => {
               live="https://bvnti.netlify.app/"
               desc={bVntiDesc.desc}
             />
-            {/* <ThreeDCardDemo
-              title="No Limit Store"
-              frontend="NextJS"
-              backend="NodeJS"
-              database="MongoDB"
-              imageSrc="/ecom-pic.png"
-              link=""
-              live="https://nolimitstores.org/"
-              desc={ecomDesc.desc}
-            /> */}
-            <ThreeDCardDemo
+             <ThreeDCardDemo
               title="Unique Love Sharity"
               frontend="NextJS"
               backend="Stripe"
@@ -116,8 +72,6 @@ const Projects = () => {
               live="https://vboys.vercel.app/"
               desc={vogueDesc.desc}
             />
-
-
             <ThreeDCardDemo
               title="Positivus"
               frontend="NextJS"
@@ -141,7 +95,7 @@ const Projects = () => {
                   {matteDesc.desc}
                   <span style={{ margin: "0 1px" }}></span>
                   <a
-                    className="hover:underline text-black"
+                    className="hover:underline text-black dark:text-white"
                     href="https://the18.design/freebies"
                   >
                     the18.design
@@ -159,19 +113,6 @@ const Projects = () => {
               live="#"
               desc={eventDesc.desc}
             />
-          </div>
-        </div>
-        <div className="mt-8 lg:mb-16">
-          <h3 className="text-bold   w-fit text-gray-600">Tech Stack</h3>
-          <div className="flex gap-4 mt-4 ">
-            <FloatingDock mobileClassName="translate-y-20" items={stack} />
-          </div>
-          <div className="lg:hidden grid items-center place-items-center grid-cols-4 gap-2">
-            {stack.map((item) => (
-              <div key={item.icon} className="   gap-2">
-                {item.icon}
-              </div>
-            ))}
           </div>
         </div>
       </div>

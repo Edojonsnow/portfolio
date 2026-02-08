@@ -25,7 +25,7 @@ export const positivusDesc = {
   desc: "Developed from a vibrant, minimalist template sourced from the Figma community, this responsive frontend project highlights my web development skills. The site features smooth animations and a clean layout. ",
 };
 export const bVntiDesc = {
-  desc: "A sleek and immersive official website tailored for a musician, built using React and Tailwind CSS. This responsive platform features a modern, artist-first design that elegantly showcases discography, tour dates, and media content with smooth animations and high-performance navigation.",
+  desc: "A sleek and immersive official website tailored for a musician, built using React and Tailwind. This responsive platform features a modern, artist-first design that elegantly showcases discography, tour dates, and media content",
 };
 
 export const matteDesc = {
