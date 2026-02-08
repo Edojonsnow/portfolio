@@ -166,10 +166,9 @@ export function SidebarDemo({ children }) {
               value="Send Message"
               className="p-[3px] relative lg:mb-6"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full" />
               <div
                 id="send"
-                className="px-8 py-2  bg-white rounded-full  relative group transition duration-200 text-black hover:text-white hover:bg-transparent"
+                className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-neutral-950 px-8 font-medium text-neutral-200 transition-all duration-300 hover:bg-neutral-800 hover:text-white hover:ring-2 hover:ring-purple-500 hover:ring-offset-2 hover:ring-offset-white dark:hover:ring-offset-black"
               >
                 Resume
               </div>
