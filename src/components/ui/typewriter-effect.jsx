@@ -60,7 +60,7 @@ export const TypewriterEffect = ({ words, className, cursorClassName }) => {
   return (
     <div
       className={cn(
-        "text-base sm:text-xl md:text-3xl lg:text-5xl font-bold text-center",
+        "text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center",
         className
       )}
     >

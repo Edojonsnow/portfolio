@@ -159,7 +159,7 @@ const Home = () => {
               </p>
 
               <div
-                class=" lg:pt-10 relative mx-auto w-fit cursor-pointer"
+                className=" lg:pt-10 relative mx-auto w-fit cursor-pointer"
                 data-aos="fade-up"
                 data-aos-delay="1000"
               >
@@ -174,7 +174,7 @@ const Home = () => {
                       className="text-purple-400"
                     />
                   </div>
-                  <div class="absolute rounded-xl bottom-0 left-0 h-0.5 w-0 py-2 bg-purple-500 opacity-20 transition-all duration-300 group-hover:w-full"></div>
+                  <div className="absolute rounded-xl bottom-0 left-0 h-0.5 w-0 py-2 bg-purple-500 opacity-20 transition-all duration-300 group-hover:w-full"></div>
                 </span>
                 <Link href="/contact">
                   <span className="text-gray-500 group hidden lg:block pt-4   relative">
@@ -182,7 +182,7 @@ const Home = () => {
                       Let's chat
                       <IconBubbleText stroke={2} className="text-purple-400" />
                     </div>
-                    <div class="absolute rounded-xl bottom-0 left-0 h-0.5 w-0 py-2 bg-purple-500 opacity-20 transition-all duration-300 group-hover:w-1/2"></div>
+                    <div className="absolute rounded-xl bottom-0 left-0 h-0.5 w-0 py-2 bg-purple-500 opacity-20 transition-all duration-300 group-hover:w-1/2"></div>
                   </span>
                 </Link>
                 <div className="flex justify-around gap-4 w-full mx-auto ">
